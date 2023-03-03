@@ -52,18 +52,20 @@
     };
 
 
-    //버섯을 싫어하는 사람들의 이름을 배열에 넣음
-    let hateMushroom = 0;
-    let hateMushroomHuman = [];
+    // const studentKeys = Object.values(studentObject);
+    // console.log(Object.keys(studentObject));
 
-    const studentKeys = Object.keys(studentObject);
-    console.log(Object.keys(studentObject));
 
+    //배열함수에서 키값을 가져와서 div안에 텍스트로 넣기
     const hateMenu = "버섯";
-    for(let hate in studentObject){
-      const objectStuKeys = Object.keys(studentObject)
-
-      document.write()
+    for(let key in studentObject){
+      // console.log("이름",key)
+      // console.log("음식",studentObject[key])
+      if(studentObject[key]===hateMenu){
+        const div = document.createElement('div');
+        div.innerText=key;
+        root.appendChild(div)
+      }
     }
   </script>
 </body>
