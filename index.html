@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    const root = document.getElementById('root');
+    const makeUl = document.createElement('ul');
+    root.appendChild(makeUl);
+    // makeUl.style.width="100px";
+    // makeUl.style.height="100px";
+    // makeUl.style.border="1px solid black";
+
+
+    // const ulStyleObject = ["width","height","border"];
+    // makeUl.style[ulStyleObject[0]]="100px"
+    // makeUl.style[ulStyleObject[1]]="100px"
+    // makeUl.style[ulStyleObject[2]]="1px solid black"
+
+    //여기까지는 연구할만하다.
+    // const ulStyleValue = ["100px","100px","1px solid black"]
+
+    //궁극적이다.
+    // for(let i=0; i <ulStyleObject.length;i++){
+    //   makeUl.style[ulStyleObject[i]]=ulStyleValue[i]
+    // }
+    
+    let DOMStyle = {
+      firstArray : ["width","height","border"],
+      secondArray : ["100px","100px","1px solid black"],
+      element : root.children[0]
+    }
+
+    //패턴을 발견하고 적용하는것을 말한다.
+    function twoArrayDOMstyle (firstArray, secondArray, element){
+      for(let i=0; i <firstArray.length;i++){
+        element.style[firstArray[i]]=secondArray[i]
+      }
+    }
+    
+    twoArrayDOMstyle(ulStyleObject,ulStyleValue,makeUl)
+    
+    function oneObjectDOMStyling (object){
+      for(let i=0; i <object.firstArray.length;i++){
+        object.element.style[object.firstArray[i]]=object.secondArray[i]
+      }
+    }
+    
+  </script>
+</body>
+</html>
