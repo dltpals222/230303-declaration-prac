@@ -55,23 +55,53 @@
     //버섯을 싫어하는 사람들의 이름을 배열에 넣음
     let hateMushroom = 0;
     let hateMushroomHuman = [];
-    console.log(studentObject[1])
 
+    const studentKeys = Object.keys(studentObject);
+    console.log(Object.keys(studentObject));
 
     const hateMenu = "버섯";
     for(let hate in studentObject){
       if(studentObject[hate] === hateMenu){
-        console.log(hateMushroomHuman[hateMushroom] = hate);
-      }
-    }
+        document.write(Object.keys(studentObject[hate]))
 
-    console.log(hateMushroomHuman)
+      //   const mushKeys = Object.keys(studentObject[hate]);
+      // }
+      //   for(let n in hate){
+      //     const listHate = hate[n];
+      //     const listData = studentObject[hate][hate[n]];
 
-    for(let i=0;i < hateMushroomHuman.length;i++){
-      root.appendChild(tagElement)
-      root.children[i].innerHTML = hateMushroomHuman[i]
-    }
+      //     hateMushroomHuman[listHate] = listData;
+        }
+        }
+
+        // console.log(hateMushroomHuman)
     
+    
+    // console.log(hateMushroomHuman.length)
+    // console.log(zerostart())
+
+    // for(let i=0; i < zerostart; i++){
+      // root.appendChild(tagElement)
+      // root.children[i].innerHTML = hateMushroomHuman[i]
+    // }
+
+//     console.dir(hate.);
+
+// function zerostart (){
+//   if(hate.length === 0){
+//     1
+//   } else {
+//     hate.length
+//   }
+// }
+
+// for(let i=0; i< zerostart;i++){
+//   root.appendChild(tagElement);
+//   root.children[i].innerHTML = console.log;
+// }
+// for(let i=0; i < hateMushroomHuman.length;i++){
+  //   hateMushroomHuman[i]
+  // };
   </script>
 </body>
 </html>
